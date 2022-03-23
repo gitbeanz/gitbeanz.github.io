@@ -1,0 +1,274 @@
+@font-face {
+    font-family: 'vcr_osd_monoregular';
+    src: url('vcr_osd_mono_1.001-webfont.woff2') format('woff2'),
+         url('vcr_osd_mono_1.001-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'vcr_osd_monoregular';
+    margin: 0;
+    padding: 0;
+    background: white;
+}
+
+.headings{
+    font-family: 'vcr_osd_monoregular', 'Courier New';
+    margin: 40px 0px;
+    margin-bottom: 20px;
+}
+
+div{
+    white-space: normal;
+}
+
+.container{
+    text-align: center;
+}
+
+.projectlist{
+    text-align: left;
+}
+
+nav{
+   background: white;
+   height: 80px;
+   width: 100%;
+   position: fixed;
+}
+
+label.logo{
+    color: black;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: black;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+a.active,a:hover{
+    background: lightpink;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: white;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover, a.active{
+        background: lightpink;
+        color: black;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+@media (max-width: 444px){
+    label.logo{
+        font-size: 20px;
+        padding-left: 40px;
+    }
+
+}
+#home{
+    background: url(b.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: bottom;
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    background-color: white;
+    background-size: cover;
+    height: 100vh;
+}
+
+.img-fluid{
+    width: 50%;
+    height: auto;
+}
+
+@media screen and (max-width: 500px){
+    .responsive{
+        padding: 0px 20px;
+        background-color: white;
+    }
+}
+#projects{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    background-color: white;
+    background-size: cover;
+    height: 100vh;
+}
+
+a{
+    font-family:  'vcr_osd_monoregular';
+    padding: 5px;
+}
+a:hover{
+    background: lightpink;
+    transition: .5s;
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    background-color: white;
+    background-size: cover;
+    height: 100vh;
+}
+
+section{
+    max-height: 100vh;
+}
+p{
+    padding-left: 10px;
+}
+h4{
+    padding-left: 10px;
+}
+@media screen and (min-width: 375px){
+    #projects{
+        margin-bottom: 300px;
+    }
+}
+
+@media screen and (min-width: 790px){
+    #projects{
+        margin-bottom: 350px;
+    }
+}
+@media screen and (min-width: 800px){
+    #about{
+        margin-bottom: 100px;
+    }
+    #projects{
+        margin-bottom: 350px;
+    }
+    p{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+    h4{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+}
+
+@media screen and (min-width: 850px){
+    #about{
+        margin-bottom: 200px;
+    }
+    #projects{
+        margin-bottom: 200px;
+    }
+}
+
+@media screen and (min-width: 1030px){
+    #about{
+        margin-bottom: 300px;
+    }
+    #projects{
+        margin-bottom: 300px;
+    }
+    p{
+        font-size: 20px;
+        padding-left: 55px;
+    }
+    h4{
+        font-size: 20px;
+        padding-left: 55px;
+    }
+}
+
+@media screen and (min-width: 1150px){
+    #about{
+        margin-bottom: 400px;
+    }
+    #projects{
+        margin-bottom: 400px;
+    }
+}
+
+@media screen and (min-width: 1250px){
+    #about{
+        margin-bottom: 500px;
+    }
+    #projects{
+        margin-bottom: 500px;
+    }
+}
